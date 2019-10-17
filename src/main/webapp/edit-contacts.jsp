@@ -10,7 +10,7 @@
 <body>
 <h2>Modification du contact:</h2>
 
-<form action="ModifierContactServlet2" method="POST">
+<form action="ModifierContactServlet2" method="POST" accept-charset="UTF-8">
 Civilité<select name="civ" size="1">
 <option>M
 <option>Mme

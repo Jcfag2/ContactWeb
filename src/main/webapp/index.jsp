@@ -8,7 +8,7 @@
 <title>Contacts</title>
 <body>
 <h2>Bienvenue!</h2>
-<form action="AllContactsServlet" method="POST">
+<form action="AllContactsServlet" method="POST" accept-charset="UTF-8">
 <button type="submit">Afficher tous les contacts</button>
 </form>
 <br>
