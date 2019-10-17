@@ -1,4 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix ="c" %>
+<!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
 <title>Contacts</title>
 <body>
 <h2>Bienvenue!</h2>
@@ -8,9 +14,9 @@
 <br>
 ================================================
 <br>
-<h2>Créer un contact</h2>
+<h2>CrÃ©er un contact</h2>
 <form action="CreerContactServlet" method="POST">
-Civilité<select name="civ" size="1">
+CivilitÃ©<select name="civ" size="1">
 <option>M
 <option>Mme
 <option>Mlle
@@ -21,9 +27,9 @@ Civilité<select name="civ" size="1">
 <br>
 Nom<input name="nom" id="nom" size="20">
 <br>
-Prénom<input name="prenom" id="prenom" size="20">
+PrÃ©nom<input name="prenom" id="prenom" size="20">
 <br>
-<button type="submit">Créer le contact</button>
+<button type="submit">CrÃ©er le contact</button>
 </form>
 </body>
 </html>
