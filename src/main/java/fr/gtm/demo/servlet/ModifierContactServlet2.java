@@ -13,9 +13,6 @@ import fr.gtm.demo.entities.Civilite;
 import fr.gtm.demo.entities.Contact;
 import fr.gtm.demo.services.ContactServices;
 
-/**
- * Servlet implementation class SupprimerContactServlet
- */
 @WebServlet("/ModifierContactServlet2")
 public class ModifierContactServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
