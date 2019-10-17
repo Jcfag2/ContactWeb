@@ -64,7 +64,7 @@ public class ContactDAO {
 	}
 	
 	public List<Contact> getAllContact(){
-		String sql = "SELECT * FROM Contact c";
+		String sql = "SELECT c FROM Contact c";
 		EntityManager em = emf.createEntityManager();
 		List<Contact> contacts = em.createQuery(sql, Contact.class).getResultList();
 		em.close();

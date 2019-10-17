@@ -12,15 +12,21 @@ import fr.gtm.demo.Constantes;
 import fr.gtm.demo.entities.Contact;
 import fr.gtm.demo.services.ContactServices;
 
-
-@WebServlet("/AllContactsServlet")
-public class AllContactsServlet extends HttpServlet {
+/**
+ * Servlet implementation class SupprimerContactServlet
+ */
+@WebServlet("/SupprimerContactServlet")
+public class SupprimerContactServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ContactServices service = (ContactServices) getServletContext().getAttribute(Constantes.CONTACT_SERVICES);
 		String page = "";
+		
+		Long id = Long.valueOf(request.getParameter("id"));
+		Contact contact = service.getContactById(id);
+		service.delete(contact);
 			List<Contact> contacts = service.getAllContact();
 			request.setAttribute("contacts", contacts);
 			page = "/show-contacts.jsp";
