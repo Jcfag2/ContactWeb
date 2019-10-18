@@ -20,8 +20,6 @@ private String rue;
 private String codePostal;
 private String ville;
 private String pays = "France";
-
-
 	
 	public Adresse() {
 	}

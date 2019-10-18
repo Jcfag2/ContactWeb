@@ -102,6 +102,16 @@ public class ContactDAO {
 			}
 		return adresses;
 	}
+	
+	public void createAdresse(Adresse adresse) {
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+	
+		em.persist(adresse);
+
+		em.getTransaction().commit();
+		em.close();
+	}
 
 	
 }

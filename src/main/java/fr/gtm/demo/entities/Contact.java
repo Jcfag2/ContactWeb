@@ -95,6 +95,11 @@ public class Contact implements Serializable {
 		return adresses;
 	}
 
+	
+	public void setAdresses(Set<Adresse> adresses) {
+		this.adresses = adresses;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -49,4 +49,8 @@ public class ContactServices {
 		return dao.getAdresseByContactId(id);
 	}
 	
+	public void createAdresse(Adresse adresse) {
+		dao.createAdresse(adresse);
+	}
+	
 }
