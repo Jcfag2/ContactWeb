@@ -17,9 +17,7 @@
 		<td>${contacts.prenom }</td>
 		<td><a href="SupprimerContactServlet?id=${contacts.id }">Supprimer le contact</a></td>
 		<td><a href="ModifierContactServlet?id=${contacts.id }">Modifier le contact</a></td>
-		<c:forEach items="${contacts.adresses }" var="adresses">
-		<tr><td colspan="5">${adresses }</td></tr>
-		</c:forEach>
+		<td><a href="AfficherAdressesServlet?id=${contacts.id }">Afficher les adresses du contact</a></td>
 	</tr>
 	</c:forEach>
 </table>
