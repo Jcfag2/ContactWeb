@@ -63,6 +63,7 @@ public class ContactDAO {
 		return contacts;
 	}
 	
+	
 	public List<Contact> getAllContact(){
 		String sql = "SELECT c FROM Contact c";
 		EntityManager em = emf.createEntityManager();

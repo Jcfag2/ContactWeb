@@ -89,8 +89,7 @@ private String pays = "France";
 
 	@Override
 	public String toString() {
-		return "Adresse [id=" + id + ", rue=" + rue + ", codePostal=" + codePostal + ", ville=" + ville + ", pays="
-				+ pays + "]";
+		return rue + ", " + codePostal + ", " + ville + ", "+ pays;
 	}
 
 	
