@@ -13,8 +13,8 @@
 	<c:forEach items="${contacts }" var="contacts">
 	<tr><td>${contacts.id }</td>
 		<td>${contacts.civilite }</td>
-		<td>${contacts.nom }</td>
 		<td>${contacts.prenom }</td>
+		<td>${contacts.nom }</td>
 		<td><a href="SupprimerContactServlet?id=${contacts.id }">Supprimer le contact</a></td>
 		<td><a href="ModifierContactServlet?id=${contacts.id }">Modifier le contact</a></td>
 		<td><a href="AfficherAdressesServlet?id=${contacts.id }">Afficher les adresses du contact</a></td>

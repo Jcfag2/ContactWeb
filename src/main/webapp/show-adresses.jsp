@@ -18,6 +18,7 @@
 
 
 
-<a href="index.jsp">Retour</a>
+<a href="index.jsp">Retour à l'index</a><br>
+<a href="AllContactsServlet">Voir tous les contacts</a>
 </body>
 </html>
