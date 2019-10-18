@@ -23,7 +23,7 @@ public class AjouterAdressesServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ContactServices service = (ContactServices) getServletContext().getAttribute(Constantes.CONTACT_SERVICES);
-		String page = "/show-adresses.jsp";
+		String page = "";
 		
 		Long id = Long.valueOf(request.getParameter("id2"));
 		String rue = request.getParameter("rue");
@@ -36,11 +36,17 @@ public class AjouterAdressesServlet extends HttpServlet {
 		service.createAdresse(adresse);
 		
 		Contact contact = service.getContactById(id);
-		Set<Adresse> adresse2 = contact.getAdresse();
+		Set<Adresse> adresse2 = service.getAdresseByContactId(id);
 		adresse2.add(adresse);
 		contact.setAdresses(adresse2);
 		service.update(contact);
 		
+		Set<Adresse> adresse3 = service.getAdresseByContactId(id);
+		Contact contact2 = service.getContactById(id);
+		
+		request.setAttribute("contact", contact2);
+		request.setAttribute("adresse", adresse2);
+		page = "/show-adresses.jsp";
 		
 		RequestDispatcher rd = getServletContext().getRequestDispatcher(page);
 		rd.forward(request, response);
