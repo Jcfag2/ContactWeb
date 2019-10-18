@@ -1,8 +1,13 @@
 package fr.gtm.demo.dao;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+
+import fr.gtm.demo.entities.Adresse;
 import fr.gtm.demo.entities.Civilite;
 import fr.gtm.demo.entities.Contact;
 public class ContactDAO {
@@ -86,6 +91,16 @@ public class ContactDAO {
 		List<Contact> contacts = em.createNamedQuery("Contact.getAdresseNotEmpty", Contact.class).getResultList();
 		em.close();
 		return contacts;
+	}
+	
+	public Set<Adresse> getAdresseByContactId(long id){
+		EntityManager em = emf.createEntityManager();
+		Contact contact = em.find(Contact.class, id);
+		Set<Adresse> adresses = new HashSet<Adresse>();
+		for (Adresse a : contact.getAdresses()){
+			adresses.add(a);
+			}
+		return adresses;
 	}
 
 	

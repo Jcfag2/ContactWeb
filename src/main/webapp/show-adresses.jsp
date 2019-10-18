@@ -8,13 +8,16 @@
 <title>Affichage des contacts</title>
 </head>
 <body>
-<h2>Liste de contacts selon vos critères:</h2>
+<h2>Liste des adresses de ${contact.prenom }  ${contact.nom } :</h2>
+
 <table>
-	<c:forEach items="${contact.adresse }" var="contact">
-	<tr><td>${adresse }</td>
-	</tr>
-	</c:forEach>
-</table>
+<c:forEach items="${adresse }" var="adresses">
+		<tr><td>${adresses }</td></tr>
+		</c:forEach>
+</table>		
+
+
+
 <a href="index.jsp">Retour</a>
 </body>
 </html>

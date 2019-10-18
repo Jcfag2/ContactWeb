@@ -1,10 +1,12 @@
 package fr.gtm.demo.services;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.EntityManagerFactory;
 
 import fr.gtm.demo.dao.ContactDAO;
+import fr.gtm.demo.entities.Adresse;
 import fr.gtm.demo.entities.Civilite;
 import fr.gtm.demo.entities.Contact;
 
@@ -41,6 +43,10 @@ public class ContactServices {
 	
 	public List<Contact> getContactByAdresseNotNull(){
 		return dao.getContactByAdresseNotNull();
+	}
+	
+	public Set<Adresse> getAdresseByContactId(long id){
+		return dao.getAdresseByContactId(id);
 	}
 	
 }
